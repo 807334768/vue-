@@ -156,13 +156,13 @@ export default {
             this.drawPic();
  
             //传值给父组件
-            this.$emit('makedCode', this.identifyCode);
+            this.$emit('makedCode', this.identifyCode.toLowerCase());
         }
     },
     watch: {
         fresh() {
             //监听事件
-            this.makeCode(this.identifyCodes, 4);
+            this.makeCode(this.identifyCode.toLowerCase(), 4);
         }
     }
 };
